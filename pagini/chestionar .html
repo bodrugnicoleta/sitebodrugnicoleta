@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Formular Nume și Prenume</title>
+</head>
+<body>
+    <table align="center"cellspancing="30px">
+        <tr style="font-size:200%;">
+        <th><a href="index.html">Home</a>  
+            <th><a href="../BODRUG NICOLETA HTML/pagini/chestionar .html">Chestionar</a>
+                <th><a href="../BODRUG NICOLETA HTML/pagini/contacte.html">Contacte</a>
+                    
+    <h1>Introduceți Numele și Prenumele:</h1>
+
+    <form id="nameForm">
+        <label for="prenume">Nume:</label>
+        <input type="text" id="prenume" name="prenume" required>
+        <br><br>
+        <label for="nume">Prenume:</label>
+        <input type="text" id="nume" name="nume" required>
+        <br><br>
+        <input type="submit" value="Trimite">
+        <br><br>
+        <label for="credite">Bodrug Nicoleta</label>    
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("nameForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var prenume = document.getElementById("prenume").value;
+            var nume = document.getElementById("nume").value;
+            var numeFamilie = prenume + " " + nume;
+            document.getElementById("output").innerText = "Numele complet este: " + numeFamilie;
+        });
+    </script>
+
+</body>
+</html>
